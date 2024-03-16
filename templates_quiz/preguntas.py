@@ -1,3 +1,5 @@
+"""Diccionario de preguntas, alternativas y respuestas (1 es la correcta)"""
+
 preguntas_basicas = {
     'pregunta_1': {'enunciado':['¿En qué año nació Isaac Asimov?'],
     'alternativas': [['1919', 0], 
@@ -10,7 +12,7 @@ preguntas_basicas = {
                      ['C-3PO', 0], 
                      ['Robbie', 1]]},
     
-'pregunta_3': {'enunciado':['¿Cuál es la primera ley de la robótica según Asimov?'],
+    'pregunta_3': {'enunciado':['¿Cuál es la primera ley de la robótica según Asimov?'],
     'alternativas': [['Un robot no puede lastimar a un ser humano o, por inacción, permitir que un ser humano sufra daño', 1], 
                      ['Un robot no puede lastimar a un ser humano ni, por inacción, permitir que un ser humano sufra daño a menos que esto entre en conflicto con la Tercera Ley.', 0], 
                      ['Un robot no puede desobedecer las órdenes dadas por un ser humano, excepto si esto entra en conflicto con la Primera o Segunda Ley.', 0], 

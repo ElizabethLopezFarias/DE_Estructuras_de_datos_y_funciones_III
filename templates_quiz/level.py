@@ -1,7 +1,8 @@
 def choose_level(n_pregunta, p_level):
-    
-    # Construir lógica para escoger el nivel
-    ##################################################
+	"""
+	Esta función toma dos argumentos: n_pregunta, que representa el número de la pregunta, 
+	y p_level, que es un valor que indica el nivel de preguntas que quieres dividir.
+	"""
 	if n_pregunta <= p_level:
 		level = "basicas"
 	elif n_pregunta <= 2*p_level:
@@ -10,12 +11,3 @@ def choose_level(n_pregunta, p_level):
 		level = "avanzadas"
 	return level
 
-
-    ##################################################
-    
-if __name__ == '__main__':
-    # verificar resultados
-    print(choose_level(2, 2)) # básicas
-    print(choose_level(3, 2)) # intermedias
-    print(choose_level(7, 2)) # avanzadas
-    print(choose_level(4, 3)) # intermedias

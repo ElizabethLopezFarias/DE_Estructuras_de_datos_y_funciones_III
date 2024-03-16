@@ -1,3 +1,9 @@
+"""
+Ensamblado: Estructura que ejecuta la trivia, uniendo las funciones contenidas en los archivos importados
+Para hacer de la actividad más didactica se escogió una trivia sobre Isaac Asimov
+
+"""
+
 # -*- coding: utf-8 -*-
 # No modificar
 from verify import verificar
@@ -11,6 +17,7 @@ import os
 import sys
 import codecs
 
+#verificación de utf-8 para que se puedan reconocer los caracteres especiales en la ejecución del programa
 if sys.stdout.encoding != 'utf-8':
     sys.stdout = codecs.getwriter('utf-8')(sys.stdout.buffer)
 
@@ -68,9 +75,8 @@ while correcto and n_pregunta < 3*int(p_level):
         # 7. Validar la respuesta entregada
         respuesta = validate(opciones,respuesta)
         # 8. Verificar si la respuesta es correcta o no
-        #print(alternativas,opciones,respuesta)
         correcto = verificar(alternativas,respuesta)
-        
+        # *** Optimizar declaraciones del int(p_level) ***
         if correcto and n_pregunta < 3*int(p_level):
             print('Muy bien sigue así!')
             continuar = input('Desea continuar? [y/n]: ').lower()
@@ -86,7 +92,7 @@ while correcto and n_pregunta < 3*int(p_level):
             time.sleep(3)
             exit()
     else: 
-        print('Nos vemos la proxima vez, sigue practicando')
+        print('Nos vemos la proxima vez, sigue practicando') 
         time.sleep(3)
         exit()
             
